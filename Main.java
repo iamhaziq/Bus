@@ -9,7 +9,7 @@ public class BusTicketReservationSystem {
         // Example of reserving seats
         reservation.reserveSeat(1);
         reservation.reserveSeat(2);
-        reservation.reserveSeat(3);
+        reservation.reserveSeat(3);//adding coments
 
         // Display available seats after reservations
         bus.displayAvailableSeats();
