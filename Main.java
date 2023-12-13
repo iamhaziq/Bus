@@ -1,4 +1,4 @@
-ublic class BusTicketReservationSystem {
+public class BusTicketReservationSystem {
     public static void main(String[] args) {
         // Create an instance of the Bus class
         Bus bus = new Bus(30);
