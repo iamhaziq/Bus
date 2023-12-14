@@ -33,6 +33,14 @@ class Seat {
     public void reserveSeat(int seatNumber) {
             seatStatus[seatNumber] = "Reserved";
         }
+    public void displayAvailableSeats() {
+        System.out.println("Available Seats:");
+        for (int i = 0; i < 30; i++) {
+            if (seatStatus[i] == "Available") {
+                System.out.println(seatName[i] + " " + seatType[i] + " " + seatPrice[i]);
+            }
+        }
+    }
         
 
     
