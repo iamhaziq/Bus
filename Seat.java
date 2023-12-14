@@ -2,28 +2,40 @@ import java.util.ArrayList;
 import java.util.Date;
 
 class Seat {
-    private int seatNumber;
-    private boolean isReserved;
+    private String[] seatType = new String[30];
+    private String[] seatStatus = new String[30];
+    private String[] seatPrice = new String[30];
+    private String[] seatName = new String[30];
+    
+    
+    public Seat() {
+        for(int i = 0; i < 30; i = i + 3) {
+            seatType[i] = "Single";
+            seatStatus[i] = "Available";
+            seatPrice[i] = "50";
+            seatName[i] = "Seat " + i ;
+        }
+        for(int i = 1; i < 30; i = i + 3) {
+            seatType[i] = "Double Aisle";
+            seatStatus[i] = "Available";
+            seatPrice[i] = "30";
+            seatName[i] = "Seat " + i ;
+        }
+        for (int i = 2; i < 30; i = i + 3) {
+            seatType[i] = "Double Window";
+            seatStatus[i] = "Available";
+            seatPrice[i] = "40";
+            seatName[i] = "Seat " + i ;
+        }
 
-    public Seat(int seatNumber) {
-        this.seatNumber = seatNumber;
-        this.isReserved = false;
+        public void reserveSeat(int seatNumber) {
+            seatStatus[seatNumber] = "Reserved";
+        }
+        
     }
 
-    public int getSeatNumber() {
-        return seatNumber;
-    }
+    
 
-    public boolean isReserved() {
-        return isReserved;
-    }
 
-    public void reserveSeat() {
-        isReserved = true;
-    }
-
-    @Override
-    public String toString() {
-        return "Seat " + seatNumber + " (" + (seatNumber % 3 == 2 ? "Double" : "Single") + ")";
-    }
+    
 }
