@@ -28,11 +28,12 @@ class Seat {
             seatName[i] = "Seat " + i ;
         }
 
-        public void reserveSeat(int seatNumber) {
+        
+    }
+    public void reserveSeat(int seatNumber) {
             seatStatus[seatNumber] = "Reserved";
         }
         
-    }
 
     
 
