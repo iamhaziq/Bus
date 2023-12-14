@@ -17,22 +17,11 @@ public class Main {
             case 1:
                 System.out.print("Enter your name: ");
                 String name = scanner.next();
-                System.out.print("Enter number of seats to reserve: ");
-                int numberOfSeats = scanner.nextInt();
-                System.out.print("Enter seat numbers to reserve: ");
-                int[] seatNumbers = new int[numberOfSeats];
-                for (int i = 0; i < numberOfSeats; i++) {
-                    seatNumbers[i] = scanner.nextInt();
-                }
-                Bus bus = new Bus(30);
-                Reservation reservation = new Reservation(bus, name);
-                for (int i = 0; i < numberOfSeats; i++) {
-                    reservation.reserveSeat(seatNumbers[i]);
-                }
+                
                 break;
             case 2:
                 Bus bus1 = new Bus(30);
-                bus1.displayAvailableSeats();
+                bus1.displayAvailableSeats(); 
                 break;
             case 3:
                 System.exit(0);
