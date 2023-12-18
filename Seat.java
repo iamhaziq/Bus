@@ -41,6 +41,13 @@ class Seat {
             }
         }
     }
+
+    public void displayBus(){
+        System.out.println("Bus Seats:");
+        for (int i = 0; i < 30; i++) {
+            System.out.println(seatName[i] + " " + seatType[i] + " " + seatPrice[i] + " " + seatStatus[i]);
+        }
+    }
         
 
     
