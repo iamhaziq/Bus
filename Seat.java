@@ -46,7 +46,7 @@ class Seat {
     public void displayBus(){
         System.out.println("Bus");
             if(seatStatus[0].equals("Available")){
-                System.out.println("# ")
+                System.out.println("# ");
             }
             for(int i = 1; i < 30; i++){
                 if(i%3 == 0){
