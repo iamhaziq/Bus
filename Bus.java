@@ -7,10 +7,6 @@ class Bus {
     }
 
 
-    
-
-
-
   
     public void displayBuses(){
         System.out.println("Buses");

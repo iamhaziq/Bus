@@ -21,8 +21,12 @@ public class Main {
                 bus.displayBuses();
                 System.out.println("display the seats for destination: ");
                 int destination = scanner.nextInt();
-                
-                
+                if (destination >= 1 && destination <= 3) {
+                    Seat seat = new Seat();
+                    seat.displaySeating();
+                } else {
+                    System.out.println("Invalid choice");
+                }
                 break;
             case 2:
                 System.out.print("Enter your name: ");
@@ -31,40 +35,47 @@ public class Main {
                 String id = scanner.next();
                 System.out.println();
                 bus.displayBuses();
+
+                Object answer;
+                do{
                 System.out.print("Enter your choice: ");
                 int busChoice = scanner.nextInt();
 
-                switch(busChoice){
-                    case 1:
-                        System.out.println("Bus 1 - kl to Penang");
+                //break;
+                if(busChoice==1){
+                     System.out.println("Bus 1 - kl to Penang");
                          Seat seat = new Seat();
                          seat.displaySeating(); 
                         System.out.print("Enter your seat number: ");
                         int seatNumber = scanner.nextInt();
-                        seat.reserveSeat(seatNumber);   
+                        seat.reserveSeat(seatNumber);  
 
-                        break;
-                    case 2:
-                        System.out.println("Bus 2 - kl to Johor");
-                        Seat seat2 = new Seat();
-                        seat.displaySeating(); 
+                }else if(busChoice==2){
+                     System.out.println("Bus 2 - kl to Johor");
+                         Seat seat = new Seat();
+                         seat.displaySeating(); 
                         System.out.print("Enter your seat number: ");
-                        int seatNumber2 = scanner.nextInt();
-
-                        break;
-                    case 3:
+                        int seatNumber = scanner.nextInt();
+                        seat.reserveSeat(seatNumber);
+                           
+                }else if(busChoice==3){
                         System.out.println("Bus 3 - kl to Melaka");
-                        Seat seat3 = new Seat();
-                        seat.displaySeating(); 
-                        System.out.print("Enter your seat number: ");
-
-                        break;
-                    default:
-                        System.out.println("Invalid choice");
-                        break;
+                            Seat seat = new Seat();
+                            seat.displaySeating(); 
+                            System.out.print("Enter your seat number: ");
+                            int seatNumber = scanner.nextInt();
+                            seat.reserveSeat(seatNumber);
+                }else{
+                    System.out.println("Invalid choice");
                 }
-            
+
+                System.out.println("Do you want to book another seat? (Y/N)");
+                answer = scanner.next();
+                System.out.println();
+            }while(answer.equals("Y") || answer.equals("y"));
                 break;
+
+
             case 3:
                  System.exit(0);
                 break;
@@ -73,9 +84,12 @@ public class Main {
                 System.out.println("Invalid choice");
                 break;
             }
+            
+
     }
-        }
+
 }
+
     
         
 
