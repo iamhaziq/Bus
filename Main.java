@@ -69,6 +69,34 @@ public class Main {
                         System.out.println("Invalid choice");
                     }
 
+                    Seat seat = new Seat();
+                    int seatNumber = scanner.nextInt();
+
+                    if (seat.seatType[seatNumber].equals("Single")) {
+                        System.out.println("Single seat");
+                        System.out.println("Price: RM" + seat.seatPrice[seatNumber]);
+                    } else if (seat.seatType[seatNumber].equals("Double Aisle")) {
+                        System.out.println("Double Aisle seat");
+                        System.out.println("Price: RM" + seat.seatPrice[seatNumber]);
+                    } else if (seat.seatType[seatNumber].equals("Double Window")) {
+                        System.out.println("Double Window seat");
+                        System.out.println("Price: RM" + seat.seatPrice[seatNumber]);
+                    } else {
+                        System.out.println("Invalid choice");
+                    }
+
+                    System.out.println("========================================");
+                    System.out.println("Ticket");
+                    System.out.println("========================================");
+                    System.out.println();
+                    System.out.println("Name: " + name);
+                    System.out.println("Id: " + id);
+                    System.out.println("Seat Number: " + seatNumber);
+                    System.out.println("Seat Type: " + seat.seatType[seatNumber]);
+                    System.out.println("total price: RM" + seat.seatPrice[seatNumber]);
+                    System.out.println("========================================");
+
+
 
             case 3:
                 System.exit(0);
