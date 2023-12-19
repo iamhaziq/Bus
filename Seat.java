@@ -30,10 +30,26 @@ class Seat {
             seatName[i] = "Seat " + i ;
         }
 
+
         
     }
-    public void reserveSeat(int seatNumber) {  // Haziq Mushtaq 2224071
+     private void printReciept(String name, String id, int seatNumber, int busChoice) { // Haziq Mushtaq 2224071
+        Date date = new Date();
+        System.out.println("========================================");
+        System.out.println("Ticket");
+        System.out.println("========================================");
+        System.out.println();
+        System.out.println("Date: " + date.toString());
+        System.out.println("Name: " + name);
+        System.out.println("Id: " + id);
+        System.out.println("Bus: " + busChoice);
+        System.out.println("Seat: " + seatNumber);
+        System.out.println("Price: " + seatPrice[seatNumber]);
+    }
+    public void reserveSeat(String name, String id, int seatNumber, int busChoice) {  // Haziq Mushtaq 2224071
             seatStatus[seatNumber] = "Reserved";
+            printReciept(name, id, seatNumber, busChoice);
+
         }
     public void displayAvailableSeats() { // Haziq Mushtaq 2224071
         System.out.println("Available Seats:");
@@ -43,7 +59,13 @@ class Seat {
             }
         }
     }
-    public void displaySeating(){
+
+
+
+   
+
+
+    public void displaySeating(){ // Haziq Mushtaq 2224071
         System.out.println("Bus");
             if(seatStatus[0].equals("Available")){
                 System.out.print("#  ");
@@ -55,15 +77,15 @@ class Seat {
                         System.out.print("#  ");
                     }else{
                         System.out.print("*  ");
-                }
-                }
-                if (seatStatus[i].equals("Available")){
-                    System.out.print("# ");
+                    }
                 }else{
-                    System.out.print("* ");
-                }
+                    if (seatStatus[i].equals("Available")){
+                        System.out.print("# ");
+                    }else{
+                        System.out.print("* ");
+                    }
                 
-            }
+            }   }
 
         
     }

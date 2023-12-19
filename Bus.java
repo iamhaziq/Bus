@@ -1,10 +1,37 @@
 class Bus {
+        private static Seat Bus1 = new Seat();
+        private static Seat Bus2 = new Seat();
+        private static Seat Bus3 = new Seat();
+
 
     public Bus(){
-        Seat Bus1 = new Seat();
-        Seat Bus2 = new Seat();
-        Seat Bus3 = new Seat();
+        
+    
+   
     }
+
+    public static void displayBus1(){
+        System.out.println("Bus 1");
+        Bus1.displaySeating();
+    }
+    public static void displayBus2(){
+        System.out.println("Bus 2");
+        Bus2.displaySeating();
+    }
+    public static void displayBus3(){
+        System.out.println("Bus 3");
+        Bus3.displaySeating();
+    }
+    public static void reserveSeatBus1(String name, String id, int seatNumber, int busChoice){
+        Bus1.reserveSeat(id, name, seatNumber, busChoice);
+    }
+    public static void reserveSeatBus2(String name, String id, int seatNumber, int busChoice){
+        Bus2.reserveSeat(id, name, seatNumber, busChoice);
+    }
+    public static void reserveSeatBus3(String name, String id, int seatNumber, int busChoice){
+        Bus3.reserveSeat(id, name, seatNumber, busChoice);
+    }
+
 
 
   
