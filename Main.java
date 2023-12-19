@@ -6,7 +6,7 @@ public class Main {
         Bus bus = new Bus();
 
         System.out.println("========================================");
-        System.out.println("Welcome to Bus Ticket Reservation System"); 
+        System.out.println("Welcome to Bus Ticket Reservation System");
         System.out.println("========================================");
         System.out.println("1. Display Destinations");
         System.out.println("2. Book your destination");
@@ -15,7 +15,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
-    
+
         switch (choice) {
             case 1:
                 bus.displayBuses();
@@ -37,59 +37,47 @@ public class Main {
                 bus.displayBuses();
 
                 Object answer;
-                do{
-                System.out.print("Enter your choice: ");
-                int busChoice = scanner.nextInt();
+                
+                    System.out.print("Enter your choice: ");
+                    int busChoice = scanner.nextInt();
 
-                //break;
-                if(busChoice==1){
-                     System.out.println("Bus 1 - kl to Penang");
-                         Seat seat = new Seat();
-                         seat.displaySeating(); 
-                        System.out.print("Enter your seat number: ");
-                        int seatNumber = scanner.nextInt();
-                        seat.reserveSeat(seatNumber);  
-
-                }else if(busChoice==2){
-                     System.out.println("Bus 2 - kl to Johor");
-                         Seat seat = new Seat();
-                         seat.displaySeating(); 
+                    // break;
+                    if (busChoice == 1) {
+                        System.out.println("Bus 1 - kl to Penang");
+                        Seat seat = new Seat();
+                        seat.displaySeating();
                         System.out.print("Enter your seat number: ");
                         int seatNumber = scanner.nextInt();
                         seat.reserveSeat(seatNumber);
-                           
-                }else if(busChoice==3){
-                        System.out.println("Bus 3 - kl to Melaka");
-                            Seat seat = new Seat();
-                            seat.displaySeating(); 
-                            System.out.print("Enter your seat number: ");
-                            int seatNumber = scanner.nextInt();
-                            seat.reserveSeat(seatNumber);
-                }else{
-                    System.out.println("Invalid choice");
-                }
 
-                System.out.println("Do you want to book another seat? (Y/N)");
-                answer = scanner.next();
-                System.out.println();
-            }while(answer.equals("Y") || answer.equals("y"));
-                break;
+                    } else if (busChoice == 2) {
+                        System.out.println("Bus 2 - kl to Johor");
+                        Seat seat = new Seat();
+                        seat.displaySeating();
+                        System.out.print("Enter your seat number: ");
+                        int seatNumber = scanner.nextInt();
+                        seat.reserveSeat(seatNumber);
+
+                    } else if (busChoice == 3) {
+                        System.out.println("Bus 3 - kl to Melaka");
+                        Seat seat = new Seat();
+                        seat.displaySeating();
+                        System.out.print("Enter your seat number: ");
+                        int seatNumber = scanner.nextInt();
+                        seat.reserveSeat(seatNumber);
+                    } else {
+                        System.out.println("Invalid choice");
+                    }
 
 
             case 3:
-                 System.exit(0);
+                System.exit(0);
                 break;
-                   
+
             default:
                 System.out.println("Invalid choice");
                 break;
-            }
-            
-
+        }
     }
-
-}
-
-    
-        
+}       
 
