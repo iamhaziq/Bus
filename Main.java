@@ -22,7 +22,7 @@ public class Main {
                 int choice = scanner.nextInt();
       
 
-      switch (choice) {
+      switch (choice) {//Rafiqi Razak 2224155
                 case 1:
                     bus.displayBuses();
                     System.out.println("display the seats for destination: ");
@@ -37,14 +37,14 @@ public class Main {
                 case 2:
                     System.out.print("Enter your name: ");
                     String name = scanner.next();
-                    System.out.println("Enter your Id: ");
+                    System.out.print("Enter your Id: ");
                     String id = scanner.next();
                     System.out.println();
                     bus.displayBuses();
 
             System.out.print("Enter your choice: ");
                         int busChoice = scanner.nextInt();
-
+                    
 
                         // break;
                         if (busChoice == 1) {
@@ -52,28 +52,25 @@ public class Main {
                             Bus.displayBus1();
                             System.out.print("\nEnter your seat number: ");
                             int seatNumber = scanner.nextInt();
-                            Bus.reserveSeatBus1(seatNumber);
-
+                            Bus.reserveSeatBus1(name, id, seatNumber, busChoice);
                         } else if (busChoice == 2) {
                             System.out.println("Bus 2 - kl to Johor");
                             Bus.displayBus2();
                             
                             System.out.print("\nEnter your seat number: ");
                             int seatNumber = scanner.nextInt();
-                            Bus.reserveSeatBus2(seatNumber);
+                            Bus.reserveSeatBus2(name, id, seatNumber, busChoice);
 
                         } else if (busChoice == 3) {
                             System.out.println("Bus 3 - kl to Melaka");
                             Bus.displayBus3();
                             System.out.print("\nEnter your seat number: ");
                             int seatNumber = scanner.nextInt();
-                            Bus.reserveSeatBus3(seatNumber);
+                            Bus.reserveSeatBus3(name, id, seatNumber, busChoice);
                         } else {
                             System.out.println("Invalid choice");
                         }
 
-
-                        
 
                         // if (seat.seatType[seatNumber].equals("Single")) {
                         //     System.out.println("Single seat");
@@ -98,8 +95,6 @@ public class Main {
                         // System.out.println("Seat Type: " + seat.seatType[seatNumber]);
                         // System.out.println("total price: RM" + seat.seatPrice[seatNumber]);
                         // System.out.println("========================================");
-
-
 
                 case 3:
                     System.exit(0);

@@ -5,8 +5,6 @@ class Bus {
 
 
     public Bus(){
-        
-    
    
     }
 
@@ -32,9 +30,7 @@ class Bus {
         Bus3.reserveSeat(id, name, seatNumber, busChoice);
     }
 
-
-
-  
+    
     public void displayBuses(){
         System.out.println("Buses");
         System.out.println("1. Bus 1 - kl to Penang");

@@ -62,9 +62,6 @@ class Seat {
 
 
 
-   
-
-
     public void displaySeating(){ // Haziq Mushtaq 2224071
         System.out.println("Bus");
             if(seatStatus[0].equals("Available")){
