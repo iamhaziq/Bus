@@ -31,7 +31,7 @@ public class Main {
             case 2:
                 System.out.print("Enter your name: ");
                 String name = scanner.next();
-                System.out.print("Enter your Id: ");
+                System.out.println("Enter your Id: ");
                 String id = scanner.next();
                 System.out.println();
                 bus.displayBuses();
@@ -41,12 +41,13 @@ public class Main {
                     System.out.print("Enter your choice: ");
                     int busChoice = scanner.nextInt();
 
+
                     // break;
                     if (busChoice == 1) {
                         System.out.println("Bus 1 - kl to Penang");
                         Seat seat = new Seat();
-                        seat.displaySeating();
-                        System.out.print("Enter your seat number: ");
+                       seat.displaySeating();
+                        System.out.print("\nEnter your seat number: ");
                         int seatNumber = scanner.nextInt();
                         seat.reserveSeat(seatNumber);
 
@@ -54,7 +55,7 @@ public class Main {
                         System.out.println("Bus 2 - kl to Johor");
                         Seat seat = new Seat();
                         seat.displaySeating();
-                        System.out.print("Enter your seat number: ");
+                        System.out.print("\nEnter your seat number: ");
                         int seatNumber = scanner.nextInt();
                         seat.reserveSeat(seatNumber);
 
@@ -62,7 +63,7 @@ public class Main {
                         System.out.println("Bus 3 - kl to Melaka");
                         Seat seat = new Seat();
                         seat.displaySeating();
-                        System.out.print("Enter your seat number: ");
+                        System.out.print("\nEnter your seat number: ");
                         int seatNumber = scanner.nextInt();
                         seat.reserveSeat(seatNumber);
                     } else {
@@ -107,5 +108,5 @@ public class Main {
                 break;
         }
     }
-}       
+}   
 

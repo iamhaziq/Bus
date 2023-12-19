@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 class Seat {
-    private String[] seatType = new String[30];
+    public String[] seatType = new String[30];
     private String[] seatStatus = new String[30];
-    private String[] seatPrice = new String[30];
+    public String[] seatPrice = new String[30];
     private String[] seatName = new String[30];
     
     
@@ -46,21 +46,21 @@ class Seat {
     public void displaySeating(){
         System.out.println("Bus");
             if(seatStatus[0].equals("Available")){
-                System.out.println("# ");
+                System.out.print("#  ");
             }
             for(int i = 1; i < 30; i++){
                 if(i%3 == 0){
                     System.out.println("");
                     if (seatStatus[i].equals("Available")){
-                        System.out.println("#  ");
+                        System.out.print("#  ");
                     }else{
-                        System.out.println("*  ");
+                        System.out.print("*  ");
                 }
                 }
                 if (seatStatus[i].equals("Available")){
-                    System.out.println("# ");
+                    System.out.print("# ");
                 }else{
-                    System.out.println("* ");
+                    System.out.print("* ");
                 }
                 
             }
