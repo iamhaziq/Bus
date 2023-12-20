@@ -9,6 +9,7 @@ public class Main {
             int exitSystem = 0;
 
             do{
+        System.out.println();        
         System.out.println("========================================");
         System.out.println("Welcome to Bus Ticket Reservation System");
         System.out.println("========================================");
@@ -25,11 +26,13 @@ public class Main {
       switch (choice) {//Rafiqi Razak 2224155
                 case 1:
                     bus.displayBuses();
-                    System.out.println("display the seats for destination: ");
+                    System.out.println("Display the seats for destination: ");
                     int destination = scanner.nextInt();
                     if (destination >= 1 && destination <= 3) {
                         Seat seat = new Seat();
                         seat.displaySeating();
+                        System.out.println("\n\n# is available");
+                        System.out.println("* is unavailable");
                     } else {
                         System.out.println("Invalid choice");
                     }
@@ -41,7 +44,11 @@ public class Main {
                     String id = scanner.next();
                     System.out.println();
                     bus.displayBuses();
+            
 
+            System.out.println("single seats starts with '0' and increments with 3");
+            System.out.println("aisle double seat starts with '1' and increments with 3");
+            System.out.println("Window double seat starts with '2' and increments with 3");
             System.out.print("Enter your choice: ");
                         int busChoice = scanner.nextInt();
                     
