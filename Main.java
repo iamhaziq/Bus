@@ -21,19 +21,36 @@ public class Main {
             try (Scanner scanner = new Scanner(System.in)) {
                 System.out.print("Enter your choice: ");
                 int choice = scanner.nextInt();
-      
 
       switch (choice) {//Rafiqi Razak 2224155
                 case 1:
                     bus.displayBuses();
                     System.out.println("Display the seats for destination: ");
                     int destination = scanner.nextInt();
+
+                    if( destination == 1 ){
+                        System.out.println("Bus 1 - kl to Penang");
+                        Bus.displayBus1();
+                    }
+                    else if( destination == 2 ){
+                        System.out.println("Bus 2 - kl to Johor");
+                        Bus.displayBus2();
+                    }
+                    else if( destination == 3 ){
+                        System.out.println("Bus 3 - kl to Melaka");
+                        Bus.displayBus3();
+                    }
+                    else{
+                        System.out.println("Invalid choice");
+
+                    }
                     if (destination >= 1 && destination <= 3) {
-                        Seat seat = new Seat();
-                        seat.displaySeating();
+                       
+                        
                         System.out.println("\n\n# is available");
                         System.out.println("* is unavailable");
-                    } else {
+                    } 
+                    else {
                         System.out.println("Invalid choice");
                     }
                     break;
@@ -46,12 +63,12 @@ public class Main {
                     bus.displayBuses();
             
 
-            System.out.println("single seats starts with '0' and increments with 3");
-            System.out.println("aisle double seat starts with '1' and increments with 3");
-            System.out.println("Window double seat starts with '2' and increments with 3");
+            // System.out.println("single seats starts with '0' and increments with 3");
+            // System.out.println("aisle double seat starts with '1' and increments with 3");
+            // System.out.println("Window double seat starts with '2' and increments with 3");
             System.out.print("Enter your choice: ");
                         int busChoice = scanner.nextInt();
-                    
+            System.out.println();        
 
                         // break;
                         if (busChoice == 1) {

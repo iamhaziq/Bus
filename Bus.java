@@ -5,19 +5,19 @@ class Bus {
 
 
     public Bus(){
-   
+        
     }
-
+    
     public static void displayBus1(){
-        System.out.println("Bus 1");
+        //System.out.println("Bus 1");
         Bus1.displaySeating();
     }
     public static void displayBus2(){
-        System.out.println("Bus 2");
+        //System.out.println("Bus 2");
         Bus2.displaySeating();
     }
     public static void displayBus3(){
-        System.out.println("Bus 3");
+        //System.out.println("Bus 3");
         Bus3.displaySeating();
     }
     public static void reserveSeatBus1(String name, String id, int seatNumber, int busChoice){
