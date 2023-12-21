@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Main {
    
-
-        
         public static void main(String[] args) {
             Bus bus = new Bus();
             int exitSystem = 0;
@@ -63,9 +61,6 @@ public class Main {
                     bus.displayBuses();
             
 
-            // System.out.println("single seats starts with '0' and increments with 3");
-            // System.out.println("aisle double seat starts with '1' and increments with 3");
-            // System.out.println("Window double seat starts with '2' and increments with 3");
             System.out.print("Enter your choice: ");
                         int busChoice = scanner.nextInt();
             System.out.println();        
@@ -94,31 +89,6 @@ public class Main {
                         } else {
                             System.out.println("Invalid choice");
                         }
-
-
-                        // if (seat.seatType[seatNumber].equals("Single")) {
-                        //     System.out.println("Single seat");
-                        //     System.out.println("Price: RM" + seat.seatPrice[seatNumber]);
-                        // } else if (seat.seatType[seatNumber].equals("Double Aisle")) {
-                        //     System.out.println("Double Aisle seat");
-                        //     System.out.println("Price: RM" + seat.seatPrice[seatNumber]);
-                        // } else if (seat.seatType[seatNumber].equals("Double Window")) {
-                        //     System.out.println("Double Window seat");
-                        //     System.out.println("Price: RM" + seat.seatPrice[seatNumber]);
-                        // } else {
-                        //     System.out.println("Invalid choice");
-                        // }
-
-                        // System.out.println("========================================");
-                        // System.out.println("Ticket");
-                        // System.out.println("========================================");
-                        // System.out.println();
-                        // System.out.println("Name: " + name);
-                        // System.out.println("Id: " + id);
-                        // System.out.println("Seat Number: " + seatNumber);
-                        // System.out.println("Seat Type: " + seat.seatType[seatNumber]);
-                        // System.out.println("total price: RM" + seat.seatPrice[seatNumber]);
-                        // System.out.println("========================================");
 
                 case 3:
                     System.exit(0);
