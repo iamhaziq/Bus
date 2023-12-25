@@ -8,8 +8,9 @@ class Seat  {
     private String[] seatStatus = new String[30];
     public String[] seatPrice = new String[30];
     private String[] seatName = new String[30];
+    private String destination;
 
-    public Seat() {
+    public Seat(String destination) {
         for (int i = 0; i < 30; i = i + 3) {
             seatType[i] = "Single";
             seatStatus[i] = "Available";
@@ -28,6 +29,11 @@ class Seat  {
             seatPrice[i] = "40";
             seatName[i] = "Seat " + i;
         }
+        this.destination = destination;
+    }
+
+    public String getDestination() {
+        return destination;
     }
 
     private void printReciept(String name, String id, int seatNumber, int busChoice) {
@@ -40,13 +46,13 @@ class Seat  {
         System.out.println("Date: " + date.toString());
         System.out.println("Name: " + name);
         System.out.println("Id: " + id);
-        System.out.println("Bus: " + busChoice);
+        System.out.println("Bus: " + this.destination);
         System.out.println("Seat: " + seatNumber);
         System.out.println("Price: " + seatPrice[seatNumber]);
     }
 
     public void reserveSeat(String name, String id, int seatNumber, int busChoice) {
-        seatStatus[seatNumber] = "Reserved";
+        seatStatus[seatNumber-1] = "Reserved";
         printReciept(name, id, seatNumber, busChoice);
     }
 
@@ -60,23 +66,23 @@ class Seat  {
     }
 
     public void displaySeating() {
-        System.out.println("Bus");
-        if (seatStatus[0].equals("Available")) {
-            System.out.print("#  ");
-        }
-        for (int i = 1; i < 30; i++) {
+        System.out.println("Bus Seating");
+        System.out.println(" # - Available Seat\n* - Reserved Seat");
+        System.out.println();
+        System.out.println("Single Seat\tDouble Seat");
+        for (int i = 0; i < 30; i++) {
             if (i % 3 == 0) {
                 System.out.println("");
                 if (seatStatus[i].equals("Available")) {
-                    System.out.print("#  ");
+                    System.out.print("   | #" + (i + 1) + " |\t");
                 } else {
-                    System.out.print("*  ");
+                    System.out.print("   | *" + (i + 1) + " |\t");
                 }
             } else {
                 if (seatStatus[i].equals("Available")) {
-                    System.out.print("# ");
+                    System.out.print("| #" + (i + 1) + " |");
                 } else {
-                    System.out.print("* ");
+                    System.out.print("   | *" + (i + 1) + " |\t");
                 }
             }
         }

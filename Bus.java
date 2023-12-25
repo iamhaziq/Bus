@@ -1,8 +1,7 @@
 class Bus {
-        private static Seat Bus1 = new Seat();
-        private static Seat Bus2 = new Seat();
-        private static Seat Bus3 = new Seat();
-
+        private static Seat Bus1 = new Seat("Penang");
+        private static Seat Bus2 = new Seat("Johor");
+        private static Seat Bus3 = new Seat("Melaka");
 
     public Bus(){
         
@@ -33,9 +32,9 @@ class Bus {
     
     public void displayBuses(){
         System.out.println("Buses");
-        System.out.println("1. Bus 1 - kl to Penang");
-        System.out.println("2. Bus 2 - kl to Johor");
-        System.out.println("3. Bus 3 - kl to Melaka");
+        System.out.println("1. Bus 1 - kl to "+ Bus1.getDestination() );
+        System.out.println("2. Bus 2 - kl to " + Bus2.getDestination() );
+        System.out.println("3. Bus 3 - kl to " + Bus3.getDestination());
     }
 
 }
