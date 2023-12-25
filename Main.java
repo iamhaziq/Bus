@@ -42,6 +42,7 @@ public class Main {
                     System.out.println();
                     System.out.println("Do you want to exit to the main menu? (1. Yes 2. No) : ");
                     ex = scanner.nextInt();
+                    
                 } else if (choice == 2) {
                     System.out.print("Enter your name: ");
                     String name = scanner.next();
