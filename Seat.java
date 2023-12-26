@@ -52,8 +52,13 @@ class Seat  {
     }
 
     public void reserveSeat(String name, String id, int seatNumber, int busChoice) {
+        if(seatStatus[seatNumber-1].equals("Reserved")) {
+            System.out.println("Seat is already reserved");
+            return;
+        }else {
         seatStatus[seatNumber-1] = "Reserved";
         printReciept(name, id, seatNumber, busChoice);
+        }
     }
 
     public void displayAvailableSeats() {
