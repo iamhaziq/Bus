@@ -1,13 +1,15 @@
+//Rafiqi Razak 2224155
 import java.util.Scanner;
 
 public class Main {
    
-    public static void main(String[] args) {//Rafiqi Razak 2224155
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Bus bus = new Bus();
         int choice;
         int seatNumber = 0;
         int ex = 2;
+
 
         do {
             choice = 0;    
@@ -119,7 +121,8 @@ public class Main {
                 }
 
                 System.out.println();
-            }else{
+            
+            }else {
                 System.out.println("Invalid choice");
                 ex = 1;
             }
@@ -127,7 +130,7 @@ public class Main {
             
         } while (ex == 1);
     }
-
+    
     public static void displayBuses() {
         System.out.println("Buses");
         System.out.println("1. Bus 1 - kl to Penang");

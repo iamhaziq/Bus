@@ -34,7 +34,8 @@ class Seat  {
 
     public String getDestination() {
         return destination;
-    }
+    } 
+    
 
     private void printReciept(String name, String id, int seatNumber, int busChoice) {
         Date date = new Date();
@@ -52,6 +53,7 @@ class Seat  {
         System.out.println("========================================");
         System.out.println();
     }
+    
 
     public void reserveSeat(String name, String id, int seatNumber, int busChoice) {
         if(seatStatus[seatNumber-1].equals("Reserved")) {
@@ -106,5 +108,4 @@ class Seat  {
                 System.out.print(i + " ");
             }
         }
-    }
-}
+    }}
