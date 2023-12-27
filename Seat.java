@@ -49,6 +49,8 @@ class Seat  {
         System.out.println("Bus: " + this.destination);
         System.out.println("Seat: " + seatNumber);
         System.out.println("Price: " + seatPrice[seatNumber]);
+        System.out.println("========================================");
+        System.out.println();
     }
 
     public void reserveSeat(String name, String id, int seatNumber, int busChoice) {
